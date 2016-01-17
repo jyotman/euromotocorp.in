@@ -36,3 +36,9 @@ def get_name(request):
         form = NameForm()
 
     return render(request, 'wheels/name.html', {'form': form.as_p()})
+
+def repairTyre(request):
+    return render(request, 'wheels/tyre.html')
+
+def repairAlloy(request):
+    return render(request, 'wheels/alloy.html')

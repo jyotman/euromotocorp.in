@@ -1,0 +1,111 @@
+{% load staticfiles %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMC</title>
+
+  <!-- Page styles -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css"> -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.lime-red.min.css" /> 
+  <link rel="stylesheet" href="{% static "css/index.css" %}">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+  <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+  </style>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">
+          <!-- <img class="android-logo-image" src="images/android-logo.png"> -->
+          <h2 style="color: #757575; font-family: Orbitron; font-size:130%">Euro Moto Corp.</h2>
+        </span>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="android-header-spacer mdl-layout-spacer"></div>
+
+        <!-- Navigation -->
+        <div class="android-navigation-container">
+          <nav class="android-navigation mdl-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{% url "wheels.views.home" %}">Home</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{% url "wheels.views.repairAlloy" %}">Rim Repair</a>
+
+          </nav>
+        </div>
+
+        <span class="android-mobile-title mdl-layout-title">
+          <!-- <img class="android-logo-image" src="images/android-logo.png"> -->
+        </span>
+      </div>
+    </div>
+
+    <div class="android-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <!-- <img class="android-logo-image" src="images/android-logo-white.png"> -->
+        <h2 style="color: #757575; font-family: Orbitron; font-size:130%">EMC</h2>
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="{% url "wheels.views.home" %}">Home</a>
+        <a class="mdl-navigation__link" href="{% url "wheels.views.repairAlloy" %}">Rim Repair</a>
+      </nav>
+    </div>
+
+    <div class="android-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="android-be-together-section-tyre mdl-typography--text-center">
+        <a href="#screens">
+          <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+            <i class="material-icons">expand_more</i>
+          </button>
+        </a>
+      </div>
+      <div class="android-screen-section mdl-typography--text-center">
+        <a name="screens"></a>
+        <div style="padding:5%"  id="au">
+         <div class="mdl-typography--display-1-color-contrast"><span style="font-family: Orbitron">Tyre Repair</span></div>
+         <div style="margin-bottom: 7%"></br></br>
+           <p>Paragraph here</strong>.</p>
+         </div>
+       </div>
+
+     </div>
+
+     <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">Euro Moto Corp: © 2015</div>
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_white_24dp.png" style="width:60%"></a></li>
+          <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_twitter_white_24dp.png" style="width:60%; margin-left:-50%"></a></li>
+          <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_gplus_white_24dp.png" style="width:60%; margin-left:-100%"></a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+</div>
+<a href="/nameform/" target="_self" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Contact</a>
+
+</body>
+</html>
