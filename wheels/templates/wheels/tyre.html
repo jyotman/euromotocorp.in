@@ -16,6 +16,7 @@
   <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css"> -->
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.lime-red.min.css" /> 
   <link rel="stylesheet" href="{% static "css/index.css" %}">
+  <link rel="stylesheet" href="{% static "css/.css" %}">
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
   <style>
@@ -63,32 +64,33 @@
         <h2 style="color: #757575; font-family: Orbitron; font-size:130%">EMC</h2>
       </span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="{% url "wheels.views.home" %}">Home</a>
-        <a class="mdl-navigation__link" href="{% url "wheels.views.repairAlloy" %}">Rim Repair</a>
+        <a class="mdl-navigation__link" href="{% url "wheels.views.home" %}"><Strong>Home</Strong></a>
+        <a class="mdl-navigation__link" href="{% url "wheels.views.repairAlloy" %}"><Strong>Rim Repair</Strong></a>
       </nav>
     </div>
 
     <div class="android-content mdl-layout__content">
-      <a name="top"></a>
-      <div class="android-be-together-section-tyre mdl-typography--text-center">
-        <a href="#screens">
-          <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-            <i class="material-icons">expand_more</i>
-          </button>
-        </a>
+      <div class=" mdl-typography--text-center">
+        <div class="mdl-grid margin-grid">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
+            <img src="{% static "images/tyre-area.jpg" %}" style="margin-top: 10%">
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
+            <h3 style="font-family: Orbitron">Tyre Repair</h3>
+            <p style="text-align: left">British Standard BSAU159 also defines the requirements for safe minor tyre repair and its proximity to the sidewall. Puncture plugs are used for the central 3/4th of the tyre (known as the minor repair area). If the puncture lies in the major area then a puncture plug wont stick in for long, rather a patch work is required to close that area permanently. (hyperlink)</p>
+              <h4 style="text-align: left">What is repairable</h4>
+              <p style="text-align: left">
+              The punctures in minor areas are covered by puncture plugs. But at EMC Multiple punctures, cuts upto 4 inches in the major area are also repairable.</p>
+              
+              <h4 style="text-align: left">EMC repair prices </h4>
+              <p style="text-align: left">
+              It is not just the size of damage that affects the price of a repair, but also the location on the tyre and how deeply the damage has penetrated the tyre. As you can imagine, all repairs are different and this greatly affects the prices of the repair, so to estimate it accurately we really need to see the damage first. </br>
+              This is why we offer a free, no obligation estimate service - where we make sure we quote you an accurate price for repairing the damage.</p>
+          </div>
+        </div>
       </div>
-      <div class="android-screen-section mdl-typography--text-center">
-        <a name="screens"></a>
-        <div style="padding:5%"  id="au">
-         <div class="mdl-typography--display-1-color-contrast"><span style="font-family: Orbitron">Tyre Repair</span></div>
-         <div style="margin-bottom: 7%"></br></br>
-           <p>Paragraph here</strong>.</p>
-         </div>
-       </div>
 
-     </div>
-
-     <footer class="mdl-mini-footer">
+    <footer class="mdl-mini-footer">
       <div class="mdl-mini-footer__left-section">
         <div class="mdl-logo">Euro Moto Corp: © 2015</div>
         <ul class="mdl-mini-footer__link-list">
@@ -103,9 +105,10 @@
       </div>
     </footer>
 
+    </div>
+
   </div>
-</div>
-<a href="/nameform/" target="_self" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Contact</a>
+  <a href="/nameform/" target="_self" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Contact</a>
 
 </body>
 </html>

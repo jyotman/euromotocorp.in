@@ -1,0 +1,16 @@
+#box-paragraph{
+	margin-top: 10%;
+	font-family: Roboto;
+}
+
+.android-be-together-section-alloy {
+	position: relative;
+	max-width: 100%;
+	height: 100%;
+	background-color: #f3f3f3;
+	background: url('../images/alloys.gif') center 30% no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

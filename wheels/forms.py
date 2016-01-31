@@ -1,9 +1,11 @@
 from django import forms
 
 Categories = (
-        ('Wheel Repair', 'Wheel Repair'),
-        ('Wheel Refurbish', 'Wheel Refurbish'),
-        ('Wheel Colour', 'Wheel Colour'),)
+        ('Alloy Repair', 'Alloy Repair'),
+        ('Alloy Refurbish', 'Alloy Refurbish'),
+        ('Alloy Colour', 'Alloy Colour'),
+        ('Tyre Repair', 'Tyre Repair'),
+        )
 
 class NameForm(forms.Form):
 	choice = forms.ChoiceField(label='Category', choices=Categories)
