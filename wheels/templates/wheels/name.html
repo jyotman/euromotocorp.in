@@ -11,10 +11,10 @@
 
 	<!-- Page styles -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css"> -->
-	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.lime-red.min.css" /> 
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.lime-red.min.css" /> 
 	<link rel="stylesheet" href="{% static "css/index.css" %}">
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
@@ -66,17 +66,21 @@
 			</nav>
 		</div>
 
-		<div style="background-color: #d3d3d3" class="mdl-layout__content">
+		<div class="mdl-layout__content">
 			<h3 style="text-align:center; font-family: Orbitron">Get Quote</h3>
-			<p style="text-align:center">Fill in the details to get a quote</p>
+			<h6 style="text-align:center">Fill in the details to get a quote</h6>
 
 			<form style="text-align:center; padding-bottom: 2%" action="/nameform/" method="post" enctype="multipart/form-data">
-				{% csrf_token %}
-				{{ form }}
-				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"/>
+				<div class="mdl-textfield mdl-js-textfield" style="border: 1px solid #d3d3d3">
+					{% csrf_token %}
+					{{ form }}
+				</div>
+				<div style="margin-top: 2%; margin-bottom: 5%">
+		    		<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"/>
+		    	</div>
 			</form>
 
-			<footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
+			<footer class="mdl-mini-footer"> <!-- style="position: fixed; bottom: 0; width: 100%;" -->
 				<div class="mdl-mini-footer__left-section">
 					<div class="mdl-logo">Euro Moto Corp: © 2015</div>
 					<ul class="mdl-mini-footer__link-list">

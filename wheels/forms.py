@@ -8,9 +8,9 @@ Categories = (
         )
 
 class NameForm(forms.Form):
-	choice = forms.ChoiceField(label='Category', choices=Categories)
-	name = forms.CharField(label='Name', max_length=25)
-	mobile = forms.IntegerField(label='Mobile')
-	car_make = forms.CharField(label='Car Make')
-	model = forms.CharField(label='Model', max_length=15)
-	year = forms.IntegerField(label='Year', max_value=2015)
+	choice = forms.ChoiceField(choices=Categories)
+	name = forms.CharField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))
+	mobile = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))
+	car_make = forms.CharField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))
+	model = forms.CharField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))
+	year = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))

@@ -6,6 +6,9 @@ from django.core.mail import send_mail
 from .forms import NameForm
 
 def home(request):
+    redirect = request.GET.get('redirect')
+    if redirect :
+        return render(request, 'wheels/mdl/templates/main/index.html', {"redirect" : True})
     return render(request, 'wheels/mdl/templates/main/index.html', {})
 
 def get_name(request):
@@ -28,8 +31,7 @@ def get_name(request):
 
         	send_mail('Test Message', msg, 'euromotocorp@gmail.com', recipients)
 
-        	# return HttpResponseRedirect('/thanks/')
-        	return HttpResponse('Successful Submission')
+        	return HttpResponseRedirect('/?redirect=true')
 
     # if a GET (or any other method) we'll create a blank form
     else:
