@@ -542,3 +542,26 @@ a img{
     display: none;
   }
 }
+
+#box-paragraph{
+  margin-top: 10%;
+  font-family: Roboto;
+}
+
+.demo-card-square > .card1 {
+  color: #fff;
+  background:
+    url('../images/time.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.demo-card-square > .card2 {
+  color: #fff;
+  background:
+    url('../images/money.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.demo-card-square > .card3 {
+  color: #fff;
+  background:
+    url('../images/security.png') bottom right 15% no-repeat #46B6AC;
+}
