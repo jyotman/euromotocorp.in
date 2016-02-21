@@ -68,100 +68,47 @@
       </nav>
     </div>
 
-    <div class="android-content mdl-layout__content" style="height: 100%; width: 100%">
-      <a name="top"></a>
-      <div class="android-be-together-section-alloy mdl-typography--text-center">
-        <a href="#screens">
-          <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-            <i class="material-icons">expand_more</i>
-          </button>
-        </a>
+    <div class="android-content mdl-layout__content">
+      <div class=" mdl-typography--text-center">
+        <div class="mdl-grid margin-grid">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
+            <img src="{% static "images/rim-area.jpg" %}" style="margin-top: 10%; max-width: 80%;">
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
+            <h3 style="font-family: Orbitron">Rim Repair</h3>
+            <p style="text-align: left">Euro Moto Corp. is a Rim repair company. Our professionals repair and refinish your rims offering high quality workmanship at affordable prices. All customer repairs are 100% guaranteed. Each wheel repair comes with a limited lifetime warranty.</p>
+            <h4 style="text-align: left">Don't Replace - Repair it</h4>
+            <p style="text-align: left">
+            We've perfected the art of making rims look like new again. First we repair the damage, then we smoothen the surface, then apply the colour, then we bake them so that the paint doesn't come off easily.
+              The finishing speaks for itself.</p>
+              
+              <h4 style="text-align: left">Rim repair prices</h4>
+              <p style="text-align: left">
+                The condition and the size of the rim decides the repair and refinishing cost. Our techniques are 100% genuine and cost effective and also each repair comes with a limited lifetime warranty. 
+                no obligation estimate service - where we make sure we quote you an accurate price for repairing the damage.</p>
+              </div>
+            </div>
+          </div>
+
+          <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+              <div class="mdl-logo">Euro Moto Corp: © 2016</div>
+              <ul class="mdl-mini-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+              </ul>
+              <ul class="mdl-mini-footer__link-list">
+                <li><a href="https://www.facebook.com/Euro-moto-Corp-132728500401379"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_white_24dp.png" style="width:60%"></a></li>
+                <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_twitter_white_24dp.png" style="width:60%; margin-left:-50%"></a></li>
+                <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_gplus_white_24dp.png" style="width:60%; margin-left:-100%"></a></li>
+              </ul>
+            </div>
+          </footer>
+
+        </div>
+
       </div>
+      <a href="/nameform/" target="_self" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Contact</a>
 
-      <div class="android-screen-section mdl-typography--text-center">
-        <a name="screens"></a>
-        <div style="padding:5%"  id="au">
-         <div class="mdl-typography--display-1-color-contrast"><span style="font-family: Orbitron">Rim Repair</span></div>
-         <div style="margin-bottom: 7%"></br></br>
-           <p>Paragraph here</strong>.</p>
-         </div>
-       </div>
-
-
-       <!-- <div class="mdl-grid margin-grid" style="text-align: center; background-color: #8C9EFF">
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/alloy-icon.png" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/alloy-icon.png" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/alloy-icon.png" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/alloy-icon.png" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-      </div>
-
-
-      <!-- <div class="mdl-grid margin-grid" style="text-align: center; background-color: #fff">
-        <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/alloy-straight.jpg" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-
-        
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--0-col-phone mdl-cell--0-col-tablet">
-        </div>
-
-        <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/coloured-rims.jpg" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-
-        <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%" src="{% static "images/refurbish.jpg" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-
-        
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--0-col-phone mdl-cell--0-col-tablet">
-        </div>
-
-        <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--7-col-tablet">
-          <img style="width: 30%; height: 30%" src="{% static "images/alloy-repair-main.jpg" %}" alt="Image Here">
-          <p id="box-paragraph">You should not underestimate the importance of good tyres. They are the only contact between you and the road. Each tyre touches the road surface on an area that is approximately the size of a postcard.Make sure you keep them in top-notch condition and seek advice when you have a question. </p>
-        </div>
-      </div> -->
-
-
-     </div>
-
-     <footer class="mdl-mini-footer">
-      <div class="mdl-mini-footer__left-section">
-        <div class="mdl-logo">Euro Moto Corp: © 2015</div>
-        <ul class="mdl-mini-footer__link-list">
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Privacy & Terms</a></li>
-        </ul>
-        <ul class="mdl-mini-footer__link-list">
-          <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_white_24dp.png" style="width:60%"></a></li>
-          <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_twitter_white_24dp.png" style="width:60%; margin-left:-50%"></a></li>
-          <li><a href=""><img src="https://www.gstatic.com/images/icons/material/system/2x/post_gplus_white_24dp.png" style="width:60%; margin-left:-100%"></a></li>
-        </ul>
-      </div>
-    </footer>
-
-  </div>
-</div>
-<a href="/nameform/" target="_self" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Contact</a>
-
-</body>
-</html>
+    </body>
+    </html>
