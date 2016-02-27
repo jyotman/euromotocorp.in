@@ -23,7 +23,7 @@ def incrementVisit(page_name):
 			visits = Visit.objects.create(name=page_name)
 			visits.dailyCount = 1
 			visits.totalCount += 1
-			visits.save()
+		visits.save()
 
 def home(request):
 	redirect = request.GET.get('redirect')
