@@ -51,7 +51,7 @@ def get_name(request):
 
 			msg = 'Category : ' + choice + '\n\nName : ' + name + '\n\nMobile : ' + str(mobile) + '\n\nCar Make : ' + car_make + '\n\nModel : ' + model + '\n\nYear : ' + str(year)
 
-			send_mail('Test Message', msg, 'euromotocorp@gmail.com', recipients)
+			send_mail('Quote Request', msg, 'euromotocorp@gmail.com', recipients)
 
 			return HttpResponseRedirect('/?redirect=true')
 
@@ -60,7 +60,7 @@ def get_name(request):
 		form = NameForm()
 		incrementVisit('Contact Form')
 
-	return render(request, 'wheels/name.html', {'form': form.as_p()})
+	return render(request, 'wheels/name.html', {'form': form})
 
 def repairTyre(request):
 	incrementVisit('Tyre Repair')

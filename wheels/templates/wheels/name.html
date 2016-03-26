@@ -13,11 +13,24 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css"> -->
 	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.lime-red.min.css" /> 
 	<link rel="stylesheet" href="{% static "css/index.css" %}">
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+	<!-- Setting the required attribute for all form fields -->
+	<script type="text/javascript">
+		function setRequiredAttribute() {
+			var ids = ['id_mobile', 'id_name', 'id_model', 'id_year', 'id_car_make']
+			for(var i = 0; i < ids.length; i++){
+				console.log(ids[i]);
+				var att = document.createAttribute("required");
+				var field = document.getElementById(ids[i]);
+				field.setAttributeNode(att);
+			}
+		}
+	</script>
+
 	<style>
 		#view-source {
 			position: fixed;
@@ -30,7 +43,7 @@
 		}
 	</style>
 </head>
-<body>
+<body onload="setRequiredAttribute();">
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
 		<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
@@ -70,14 +83,47 @@
 			<h3 style="text-align:center; font-family: Orbitron">Get Quote</h3>
 			<h6 style="text-align:center">Fill in the details to get a quote</h6>
 
-			<form style="text-align:center; padding-bottom: 2%" action="/nameform/" method="post" enctype="multipart/form-data">
-				<div class="mdl-textfield mdl-js-textfield" style="border: 1px solid #d3d3d3">
-					{% csrf_token %}
-					{{ form }}
-				</div>
+			<form style="text-align:center; padding-bottom: 2%" action="/contact/" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.choice}}
+				<ul>
+					<li>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							{{ form.name}}
+							<label class="mdl-textfield__label" for="id_name">Name</label>
+						</div>
+					</li>
+					<li>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							{{ form.mobile}}
+							<label class="mdl-textfield__label" for="id_mobile">Mobile</label>
+							<span class="mdl-textfield__error">Input is not a number!</span>
+						</div>
+					</li>
+					<li>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							{{ form.car_make}}
+							<label class="mdl-textfield__label" for="id_car_make">Car Make</label>
+						</div>
+					</li>
+					<li>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							{{ form.model}}
+							<label class="mdl-textfield__label" for="id_model">Model</label>
+						</div>
+					</li>
+					<li>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							{{ form.year}}
+							<label class="mdl-textfield__label" for="id_year">Year</label>
+							<span class="mdl-textfield__error">Input is not a number!</span>
+						</div>
+					</li>
+				</ul>
+
 				<div style="margin-top: 2%; margin-bottom: 5%">
-		    		<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"/>
-		    	</div>
+					<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"/>
+				</div>
 			</form>
 
 			<footer class="mdl-mini-footer"> <!-- style="position: fixed; bottom: 0; width: 100%;" -->
