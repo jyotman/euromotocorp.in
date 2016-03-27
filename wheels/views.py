@@ -48,6 +48,7 @@ def get_name(request):
 			year = form.cleaned_data['year']
 
 			recipients = ['jyotman94@gmail.com', 'euromotocorp@gmail.com']
+			#recipients = ['jyotman94@gmail.com']
 
 			msg = 'Category : ' + choice + '\n\nName : ' + name + '\n\nMobile : ' + str(mobile) + '\n\nCar Make : ' + car_make + '\n\nModel : ' + model + '\n\nYear : ' + str(year)
 

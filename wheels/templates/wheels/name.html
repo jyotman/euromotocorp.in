@@ -23,11 +23,22 @@
 		function setRequiredAttribute() {
 			var ids = ['id_mobile', 'id_name', 'id_model', 'id_year', 'id_car_make']
 			for(var i = 0; i < ids.length; i++){
-				console.log(ids[i]);
 				var att = document.createAttribute("required");
 				var field = document.getElementById(ids[i]);
 				field.setAttributeNode(att);
 			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		function formSubmitted() {
+			console.log('form submit success!');
+			var loader = document.getElementById('loader');
+			loader.className += " is-active";
+			var submitButton = document.getElementById('submitButton');
+			var att = document.createAttribute("disabled");
+			submitButton.setAttributeNode(att);
+			//submitButton.className += " mdl-button--disabled";
 		}
 	</script>
 
@@ -83,7 +94,8 @@
 			<h3 style="text-align:center; font-family: Orbitron">Get Quote</h3>
 			<h6 style="text-align:center">Fill in the details to get a quote</h6>
 
-			<form style="text-align:center; padding-bottom: 2%" action="/contact/" method="post" enctype="multipart/form-data">
+			<form style="text-align:center; padding-bottom: 2%" action="/contact/" method="post" onsubmit="formSubmitted()" 
+				enctype="multipart/form-data">
 				{% csrf_token %}
 				{{form.choice}}
 				<ul>
@@ -121,8 +133,11 @@
 					</li>
 				</ul>
 
-				<div style="margin-top: 2%; margin-bottom: 5%">
-					<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"/>
+				<!-- MDL Spinner Component -->
+				<div class="mdl-spinner mdl-js-spinner"  id="loader"></div>
+
+				<div style="margin-top: 1%; margin-bottom: 3%">
+					<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submitButton" type="submit"/>
 				</div>
 			</form>
 
