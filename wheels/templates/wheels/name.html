@@ -18,6 +18,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
+	<link rel="stylesheet" href="{% static "css/mdl-selectfield.min.css" %}">
+	<script src="{% static "css/mdl-selectfield.min.js" %}"></script>
+
 	<!-- Setting the required attribute for all form fields -->
 	<script type="text/javascript">
 		function setRequiredAttribute() {
@@ -97,7 +100,11 @@
 			<form style="text-align:center; padding-bottom: 2%" action="/contact/" method="post" onsubmit="formSubmitted()" 
 				enctype="multipart/form-data">
 				{% csrf_token %}
-				{{form.choice}}
+				<div class="mdl-selectfield mdl-js-selectfield">
+					{{form.choice}}
+					<label class="mdl-selectfield__label" for="choice">Repair Type</label>
+					<label class="mdl-selectfield__label" for="myselect">Choose option</label>
+				</div>
 				<ul>
 					<li>
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
