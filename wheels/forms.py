@@ -8,7 +8,7 @@ Categories = (
         )
 
 class NameForm(forms.Form):
-	choice = forms.ChoiceField(choices=Categories)
+	choice = forms.ChoiceField(choices=Categories, widget=forms.Select(attrs={'id': 'choice', 'class': 'mdl-selectfield__select'}))
 	name = forms.CharField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))
 	mobile = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input', 'pattern' : '-?[0-9]*(\.[0-9]+)?'}))
 	car_make = forms.CharField(widget=forms.TextInput(attrs={'class': 'mdl-textfield__input'}))
